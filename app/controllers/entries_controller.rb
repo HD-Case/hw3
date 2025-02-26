@@ -13,10 +13,10 @@ class EntriesController < ApplicationController
     @entry["description"] = params["description"]
     @entry["occurred_on"] = params["occurred_on"]
 
-    # assign relationship between Contact and Company
+    # assign relationship between Entry and Place
     @entry["place_id"] = params["place_id"]
 
-    # save Contact row
+    # save Entry row
     @entry.save
 
     # redirect user
